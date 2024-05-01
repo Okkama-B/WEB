@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  padding: 0%;
+  margin: 0%;
+  border: none;
+  box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+nav{
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+main{
+    height: calc(100% - 40px);
+    width: 100%;
+}
+button{
+    height: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.menu{
+    position: absolute;
+    top: 42px;
+    display: none;
+    left: 10px;
+    height: 200px;
+    width: 140px;
+    border: 1px solid #000;
+}
+svg{
+    display: block;
+    height: 60%;
+    width: 60%;
+}
+button:focus ~ div.menu{
+    display: flex;
+}
